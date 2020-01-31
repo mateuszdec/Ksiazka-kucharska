@@ -25,8 +25,8 @@ public class CategoryController {
     public String showCategory(@PathVariable() Long id, Model model) {
         List<Category> categoryList = categoryRepository.findAll();
         model.addAttribute("category", categoryList);
-//        List<Recipe> recipeList = recipeRepository.recipeList();
-//        model.addAttribute("recipeList", recipeList);
+        List<Recipe> recipeList = recipeRepository.recipeList();
+        model.addAttribute("recipeList", recipeList);
 
 
         Optional<Category> optionalCategory = categoryRepository.findById(id);

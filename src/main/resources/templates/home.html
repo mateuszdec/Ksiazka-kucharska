@@ -29,12 +29,20 @@
 <!--</ul>-->
 
     <h3>Wszystkie potrawy</h3>
+<!--    <ul>-->
+<!--        <li th:each="recipe: ${recipes}">-->
+<!--            <a th:href="|/recipe?name=${recipe.name}|" th:text="${recipe.name}"></a>-->
+<!--        </li>-->
+<!--    </ul>-->
     <ul>
         <li th:each="recipe: ${recipes}">
-            <a th:href="|/recipe?name=${recipe.name}|" th:text="${recipe.name}"></a>
+            <a th:href="'/film/' + ${recipe.id}" th:text="${recipe.name}"></a>
+            &nbsp;
+            <a th:href="'/recipe/edytuj/' + ${recipe.id}">(Edytuj)</a>
+            &nbsp;
+            <a th:href="'/delete/' + ${recipe.id}">(Usuń)</a>
         </li>
     </ul>
-
 
 <!--<form th:action="@{/add}" method="post" th:object="${addRecipe}">-->
 <!--    <input type="text" th:field="*{name}" placeholder="Nazwa przepisu" /> <br/>-->

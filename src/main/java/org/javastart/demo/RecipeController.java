@@ -62,14 +62,28 @@ public class RecipeController {
 
 
 
+//    @GetMapping("recipe/{id}")
+//    public String recipeView(@PathVariable Long id, Model model) {
+//        Optional<Recipe> optional = recipeRepository.findById(id);
+//        if (optional.isPresent()) {
+//            Recipe recipe = optional.get();
+//            model.addAttribute("recipe", recipe);
+//        }
+//        return "recipe";
+//    }
+
+
+
     @GetMapping("recipe/{id}")
     public String recipeView(@PathVariable Long id, Model model) {
         Optional<Recipe> optional = recipeRepository.findById(id);
         if (optional.isPresent()) {
             Recipe recipe = optional.get();
             model.addAttribute("recipe", recipe);
+            return "recipe";
+        } else {
+            return "redurect:/";
         }
-        return "recipe";
     }
 
 
@@ -127,6 +141,24 @@ public class RecipeController {
         return "redirect:/";
     }
 //
+
+
+    @GetMapping("/recipe/edytuj/{id}")
+    public String edytujForm(@PathVariable Long id, Model model) {
+        Optional<Recipe> optional = recipeRepository.findById(id);
+
+        if (optional.isPresent()) {
+            Recipe recipe = optional.get();
+            model.addAttribute("recipe", recipe);
+            model.addAttribute("mode", "edit");
+            return "addRecipeForm";
+
+        } else {
+            return "redirect:/";
+        }
+    }
+
+
     @PostMapping("/editrecipe")
     public String editRecipe(Recipe recipe){
         recipeRepository.save(recipe);

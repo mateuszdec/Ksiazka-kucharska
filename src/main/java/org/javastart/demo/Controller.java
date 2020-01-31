@@ -27,6 +27,7 @@ public class Controller {
         List<Category> categories = categoryRepository.findAll();
         model.addAttribute("category", categories);
 
+
 //        List<Category> categories = categoryRepository.findAll();
 //        model.addAttribute("categories", categories);
 //
