@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Strona główna - Książka kucharska</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+    <link href="../static/css/main.css" th:href="@{/css/main.css}" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="container">
+    <div class="jumbotron home-jumbo">
+        <div class="container text-center text-white jumbo-container">
+        </div>
+    </div>
+
+    <a th:href="@{/add}">Dodaj nowy przepis</a><br/><br/>
+    <a th:href="@{/all}">Wszystkie potrawy</a><br/>
+    <a th:href="@{/category}">Kuchnia Włoska</a><br/>
+    <a th:href="@{/category}">Kuchnia Francuska</a><br/>
+    <a th:href="@{/category}">Kuchnia Polska</a><br/>
+
+<!--<ul>-->
+<!--    <li th:each="recipe: ${recipes}">-->
+<!--        <a th:href="|/recipe?name=${recipe.name}|" th:text="${recipe.name}"></a>-->
+<!--    </li>-->
+<!--</ul>-->
+
+<!--    <ul>-->
+<!--        <li th:each="recipe: ${recipes}">-->
+<!--            <a th:href="|/recipe?name=${recipe.name}|" th:text="${recipe.name}"></a>-->
+<!--        </li>-->
+<!--    </ul>-->
+
+
+<!--<form th:action="@{/add}" method="post" th:object="${addRecipe}">-->
+<!--    <input type="text" th:field="*{name}" placeholder="Nazwa przepisu" /> <br/>-->
+<!--    <textarea th:field="*{ingredients}" placeholder="Składniki" /> <br/>-->
+<!--    <textarea th:field="*{description}" placeholder="Opis" /> <br/>-->
+<!--    <input type="submit" value="Dodaj" /> <br/>-->
+<!--</form>-->
+
+</div>
+</body>
+</html>
