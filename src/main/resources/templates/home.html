@@ -17,10 +17,10 @@
     </div>
 
     <a th:href="@{/add}">Dodaj nowy przepis</a><br/><br/>
-    <a th:href="@{/all}">Wszystkie potrawy</a><br/>
+    <h3>Kategorie</h3>
     <a th:href="@{/category}">Kuchnia Włoska</a><br/>
     <a th:href="@{/category}">Kuchnia Francuska</a><br/>
-    <a th:href="@{/category}">Kuchnia Polska</a><br/>
+    <a th:href="@{/category}">Kuchnia Polska</a><br/><br/>
 
 <!--<ul>-->
 <!--    <li th:each="recipe: ${recipes}">-->
@@ -28,11 +28,12 @@
 <!--    </li>-->
 <!--</ul>-->
 
-<!--    <ul>-->
-<!--        <li th:each="recipe: ${recipes}">-->
-<!--            <a th:href="|/recipe?name=${recipe.name}|" th:text="${recipe.name}"></a>-->
-<!--        </li>-->
-<!--    </ul>-->
+    <h3>Wszystkie potrawy</h3>
+    <ul>
+        <li th:each="recipe: ${recipes}">
+            <a th:href="|/recipe?name=${recipe.name}|" th:text="${recipe.name}"></a>
+        </li>
+    </ul>
 
 
 <!--<form th:action="@{/add}" method="post" th:object="${addRecipe}">-->
