@@ -1,4 +1,4 @@
-package org.javastart.demo;
+package org.javastart.demo.recipe;
 
 import org.javastart.demo.category.Category;
 

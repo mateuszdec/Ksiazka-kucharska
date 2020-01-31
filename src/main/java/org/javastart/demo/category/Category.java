@@ -1,10 +1,8 @@
 package org.javastart.demo.category;
 
-import org.hibernate.validator.constraints.EAN;
-import org.javastart.demo.Recipe;
+import org.javastart.demo.recipe.Recipe;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import java.util.List;

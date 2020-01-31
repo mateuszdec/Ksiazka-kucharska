@@ -1,7 +1,7 @@
 package org.javastart.demo.category;
 
-import org.javastart.demo.Recipe;
-import org.javastart.demo.RecipeRepository;
+import org.javastart.demo.recipe.Recipe;
+import org.javastart.demo.recipe.RecipeRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;

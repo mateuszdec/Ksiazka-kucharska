@@ -22,18 +22,7 @@
     <a th:href="@{/category}">Kuchnia Francuska</a><br/>
     <a th:href="@{/category}">Kuchnia Polska</a><br/><br/>
 
-<!--<ul>-->
-<!--    <li th:each="recipe: ${recipes}">-->
-<!--        <a th:href="|/recipe?name=${recipe.name}|" th:text="${recipe.name}"></a>-->
-<!--    </li>-->
-<!--</ul>-->
-
     <h3>Wszystkie potrawy</h3>
-<!--    <ul>-->
-<!--        <li th:each="recipe: ${recipes}">-->
-<!--            <a th:href="|/recipe?name=${recipe.name}|" th:text="${recipe.name}"></a>-->
-<!--        </li>-->
-<!--    </ul>-->
     <ul>
         <li th:each="recipe: ${recipes}">
             <a th:href="'/recipe/' + ${recipe.id}" th:text="${recipe.name}"></a>
@@ -43,13 +32,6 @@
             <a th:href="'/delete/' + ${recipe.id}">(Usuń)</a>
         </li>
     </ul>
-
-<!--<form th:action="@{/add}" method="post" th:object="${addRecipe}">-->
-<!--    <input type="text" th:field="*{name}" placeholder="Nazwa przepisu" /> <br/>-->
-<!--    <textarea th:field="*{ingredients}" placeholder="Składniki" /> <br/>-->
-<!--    <textarea th:field="*{description}" placeholder="Opis" /> <br/>-->
-<!--    <input type="submit" value="Dodaj" /> <br/>-->
-<!--</form>-->
 
 </div>
 </body>
