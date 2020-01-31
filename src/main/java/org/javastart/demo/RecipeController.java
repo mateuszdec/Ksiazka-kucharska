@@ -164,4 +164,22 @@ public class RecipeController {
         recipeRepository.save(recipe);
         return "redirect:/recipe/" + recipe.getId();
     }
+
+
+//    @GetMapping("category/recipe/{id}")
+//    public String showCategory(@PathVariable Long id, Model model) {
+//
+//        List<Category> categories = categoryRepository.findAll();
+//        model.addAttribute("categories", categories);
+//
+//        Optional<Recipe> optional = recipeRepository.findById(id);
+//
+//        if (optional.isPresent()) {
+//            Recipe recipe = optional.get();
+//            model.addAttribute("recipe", recipe);
+//        }
+//        return "recipe";
+//    }
+
+
 }

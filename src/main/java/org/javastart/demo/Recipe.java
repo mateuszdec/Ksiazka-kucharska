@@ -14,6 +14,7 @@ public class Recipe {
     @Column(columnDefinition="varchar(MAX)")
     private String ingredients;
     private String description;
+    private String jpg;
 
     @ManyToOne
     private Category category;
@@ -21,10 +22,11 @@ public class Recipe {
     public Recipe() {
     }
 
-    public Recipe(String name, String ingredients, String description, Category category) {
+    public Recipe(String name, String ingredients, String description, String jpg, Category category) {
         this.name = name;
         this.ingredients = ingredients;
         this.description = description;
+        this.jpg = jpg;
         this.category = category;
     }
 
@@ -66,6 +68,14 @@ public class Recipe {
 
     public void setCategory(Category category) {
         this.category = category;
+    }
+
+    public String getJpg() {
+        return jpg;
+    }
+
+    public void setJpg(String jpg) {
+        this.jpg = jpg;
     }
 
     @Override
